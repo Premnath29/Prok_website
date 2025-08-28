@@ -1,0 +1,226 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #1e1e23;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar.MuiPaper-root {
+  background-color: #1e1e23;
+  box-shadow: none;
+  padding: 0 16px;
+}
+
+.navbar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  position: relative;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  gap: 12px;
+}
+
+.menu-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.menu-icon { color: #ffffff; }
+.menu-text { color: #ffffff; font-weight: 600; }
+
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 1.6rem;
+}
+.navbar-logo span { color: #ffd200; }
+
+.get-started-btn {
+  background-color: #ffd200 !important;
+  color: black !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 999px !important;
+  padding: 8px 26px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: none !important;
+}
+
+.get-started-btn .dot {
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.get-started-btn:hover { background-color: #e6b800 !important; }
+
+.innovation-container {
+  background-color: #1e1e23;
+  color: white;
+  padding: 60px 20px;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  max-width: 1200px;
+  margin: 0 auto;      
+  text-align: center;    
+}
+
+
+.innovation-container::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+}
+.innovation-container::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.innovation-heading {
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.innovation-subtext {
+  color: #ccc;
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-yellow {
+  background-color: #ffd200 !important;
+  color: black !important;
+  font-weight: bold !important;
+  border-radius: 30px !important;
+  padding: 8px 20px !important;
+  text-transform: none !important;
+}
+.btn-yellow:hover { background-color: #e6b800 !important; }
+
+.btn-outline {
+  border: 2px solid #555 !important;
+  border-radius: 30px !important;
+  color: white !important;
+  text-transform: none !important;
+  padding: 8px 20px !important;
+}
+.btn-outline:hover {
+  border-color: #ffd200 !important;
+  color: #ffd200 !important;
+}
+
+/* ===== CARD STYLES ===== */
+.innovation-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #2a2a2a;
+  color: white;
+}
+.innovation-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.innovation-card:hover { transform: translateY(-6px); }
+
+.card-tags {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+}
+
+.card-tag {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: black !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.card-content { padding: 16px; }
+.card-title { font-weight: 700 !important; margin-bottom: 8px !important; }
+.card-date { color: #bbb; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar-toolbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .navbar-left, .navbar-right { width: 100%; padding: 0 12px; justify-content: space-between; }
+  .navbar-logo { position: static; transform: none; text-align: center; font-size: 1.25rem; }
+  .get-started-btn { width: 100%; justify-content: center; }
+
+  .innovation-container {
+    align-items: left; 
+    text-align: center;
+    padding: 40px 16px;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .filter-buttons button { width: 100%; }
+
+  .innovation-heading { font-size: 2rem; }
+  .innovation-subtext { font-size: 1rem; }
+}
